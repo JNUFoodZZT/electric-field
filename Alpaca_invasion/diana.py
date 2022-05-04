@@ -28,12 +28,12 @@ class Diana():
         self.moving_down = False
 
     def update(self):
-        """根据移动标志调整飞船位置"""
+        """根据移动标志调整位置"""
         if self.moving_right and self.rect.right < self.screen_rect.right:
             self.centerx += self.ai_settings.diana_speed_factor
         if self.moving_left and self.rect.left > 0 :
             self.centerx -= self.ai_settings.diana_speed_factor
-        if not self.moving_up and self.centery < 850:
+        if not self.moving_up and self.centery < 950:
             self.centery += self.ai_settings.diana_speed_factor
         if not self.moving_down and self.centery > 50:
             self.centery -= self.ai_settings.diana_speed_factor
@@ -50,3 +50,6 @@ class Diana():
         """指定位置绘制嘉然"""
         self.screen.blit(self.image,self.rect)
 
+    def center_diana(self):
+        self.centerx = self.screen_rect.centerx
+        self.centery = self.screen_rect.bottom

@@ -8,7 +8,7 @@ class Alpaca(Sprite):
         self.screen = screen
         self.ai_settings = ai_settings
 
-        #加载外星人图像，设置属性
+        #加载羊驼图像，设置属性
         self.image = pygame.image.load('images/alpaca.bmp')
         self.rect = self.image.get_rect()
 
